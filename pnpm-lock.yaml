@@ -1,0 +1,48 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@ionic/core':
+    specifier: ^7.6.0
+    version: 7.6.0
+  '@stencil/core':
+    specifier: ^4.7.0
+    version: 4.8.2
+
+devDependencies:
+  '@types/node':
+    specifier: ^16.18.11
+    version: 16.18.68
+
+packages:
+
+  /@ionic/core@7.6.0:
+    resolution: {integrity: sha512-pDX8G915puz8OcLhxfb9MwuvpYZsUOCngJdd+61ibJ6UF+NA2mGatsMqHKzcgelTXtwcHDpi9ZLUD/HNmupqaQ==}
+    dependencies:
+      '@stencil/core': 4.8.2
+      ionicons: 7.2.1
+      tslib: 2.6.2
+    dev: false
+
+  /@stencil/core@4.8.2:
+    resolution: {integrity: sha512-KdZEAtz9VnqMtXOkf51+8mphyRt0fN/LYgtj5M8gnveGspG8KzoyTDzlWt0wsstWIsJJ21RA1yd3AgMMZiu3MA==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
+    hasBin: true
+    dev: false
+
+  /@types/node@16.18.68:
+    resolution: {integrity: sha512-sG3hPIQwJLoewrN7cr0dwEy+yF5nD4D/4FxtQpFciRD/xwUzgD+G05uxZHv5mhfXo4F9Jkp13jjn0CC2q325sg==}
+    dev: true
+
+  /ionicons@7.2.1:
+    resolution: {integrity: sha512-2pvCM7DGVEtbbj48PJzQrCADCQrqjU1nUYX9l9PyEWz3ZfdnLdAouqwPxLdl8tbaF9cE7OZRSlyQD7oLOLnGoQ==}
+    dependencies:
+      '@stencil/core': 4.8.2
+    dev: false
+
+  /tslib@2.6.2:
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+    dev: false

@@ -36,7 +36,7 @@ export class MyComponent {
             <ion-nav></ion-nav>
           </ion-tab></ion-tabs>}
 
-        {/* this kind of leaking only happens in dev environment so it is not that big, but still, it's very hard to difficate if it's dev only, so it makes the dev experience very bad. */}
+        {/* this kind of leaking only happens in dev environment so it is not that big, but still, it's very hard to differentiate if it's dev only, so it makes the dev experience very bad. */}
         {/* {this.isOpen && <ion-button>Test</ion-button>} */}
       </Host>
     );

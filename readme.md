@@ -17,6 +17,9 @@ To reproduce the issue:
 2. Then run `npm run start`.
 3. Click the button to observe the memory leak issue.
 
+
+
+In the following ionic component, even in dev environment, there is memory leak.
 You can replace `ion-button` with other components to observe the same issue:
 
 - [ ] ion-action-sheet

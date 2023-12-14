@@ -29,11 +29,11 @@ export class MyComponent {
       <Host>
 
         <button onClick={this.handler}>Trigger Leak</button>
-        {/* ion-button can be other element like ion-searchbar. and can be other stencil component too. */}
         <br />
-        {this.isOpen && <ion-button>here</ion-button>}
-        {/* we can wrap ion-button in div, and the whole div won't get garbage collected */}
-        {/* {this.isOpen && <div><ion-button>here</ion-button></div>} */}
+        {this.isOpen && <ion-tabs>
+          <ion-tab tab="home">
+            <ion-nav></ion-nav>
+          </ion-tab></ion-tabs>}
       </Host>
     );
   }

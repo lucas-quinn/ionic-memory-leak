@@ -1,10 +1,10 @@
-# ionic component memory leak
+# stencil/ionic component memory leak
 
 If we render a component conditionally, there will be a memory leak issue for some components.
 
 If the compoent exists in a stencil component, the whole stencil component will not be garbage collected. For example, we wrap ion-button in a stencil component, and render it conditionally, the stencil component will not be garbage collected.
 
-Ionic latest
+Ionic@latest
 
 - [ ] React@latest perfect clean
 
@@ -13,7 +13,6 @@ Ionic latest
 - [ ] Vue@latest has one element left in memory, but it cleans memoery correctly.
 
 - [x] Stencil@latest couldn't do garbage collection correctly, resulting in memeory leak.
-
 
 `npm install`
 then
@@ -109,6 +108,6 @@ You can replace the `ion-button` with other components to see the same issue.
 - [ ] ion-header
 - [ ] ion-footer
 - [ ] ion-title
-- [?] ion-buttons (must have ion-button, so it has an issue)
+- [x] ?ion-buttons (must have ion-button, so it has an issue)
 - [ ] ion-back-button
 - [ ] ion-text

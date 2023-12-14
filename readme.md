@@ -1,26 +1,23 @@
-# stencil/ionic component memory leak
+# Stencil/Ionic Component Memory Leak
 
 If we render a component conditionally, there will be a memory leak issue for some components.
 
-If the compoent exists in a stencil component, the whole stencil component will not be garbage collected. For example, we wrap ion-button in a stencil component, and render it conditionally, the stencil component will not be garbage collected.
+If the component exists in a Stencil component, the whole Stencil component will not be garbage collected. For example, if we wrap `ion-button` in a Stencil component and render it conditionally, the Stencil component will not be garbage collected.
 
-Ionic@latest
+all use Ionic@latest
 
-- [ ] React@latest perfect clean
+- [ ] React@latest: perfect clean
+- [ ] Angular@latest: perfect clean
+- [ ] Vue@latest: has one element left in memory, but it cleans memory correctly.
+- [x] Stencil@latest: couldn't perform garbage collection correctly, resulting in memory leak.
 
-- [ ] Angular@latest perfect clean
+To reproduce the issue:
 
-- [ ] Vue@latest has one element left in memory, but it cleans memoery correctly.
+1. Run `npm install`.
+2. Then run `npm run start`.
+3. Click the button to observe the memory leak issue.
 
-- [x] Stencil@latest couldn't do garbage collection correctly, resulting in memeory leak.
-
-`npm install`
-then
-`npm run start`
-and click the button
-to see the memory leak issue.
-
-You can replace the `ion-button` with other components to see the same issue.
+You can replace `ion-button` with other components to observe the same issue:
 
 - [ ] ion-action-sheet
 - [ ] ion-accordion
@@ -76,20 +73,6 @@ You can replace the `ion-button` with other components to see the same issue.
 - [ ] ion-backdrop
 - [ ] ion-nav
 - [ ] ion-nav-link
-- [ ] ion-popover
-- [ ] ion-loading
-- [ ] ion-progress-bar
-- [ ] ion-skeleton-text
-- [ ] ion-spinner
-- [ ] ion-radio
-- [ ] ion-radio-group
-- [ ] ion-range
-- [ ] ion-refresher
-- [x] ion-refresher-content
-- [ ] ion-reorder
-- [ ] ion-reorder-group
-- [ ] ion-router
-- [ ] ion-router-link
 - [ ] ion-router-outlet
 - [ ] ion-route
 - [ ] ion-route-redirect

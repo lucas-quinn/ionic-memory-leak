@@ -1,9 +1,9 @@
-import { Component, State, h } from '@stencil/core';
+import { Component, Host, State, h } from '@stencil/core';
 
 
 @Component({
   tag: 'my-component',
-  // shadow: true,
+  shadow: true,
 })
 export class MyComponent {
 
@@ -15,23 +15,26 @@ export class MyComponent {
     // we can set internal to trigger this indifinitely so you don't need to click
 
 
-    // setInterval(() => {
-    //   this.isOpen = !this.isOpen;
-    // }, 100);
+    setInterval(() => {
+      this.isOpen = !this.isOpen;
+    }, 10);
 
 
-    this.isOpen = !this.isOpen;
+    // this.isOpen = !this.isOpen;
   }
 
 
   render() {
     return (
-      <div>
+      <Host>
+
         <button onClick={this.handler}>Trigger Leak</button>
         {/* ion-button can be other element like ion-searchbar. and can be other stencil component too. */}
         <br />
         {this.isOpen && <ion-button>here</ion-button>}
-      </div>
+        {/* we can wrap ion-button in div, and the whole div won't get garbage collected */}
+        {/* {this.isOpen && <div><ion-button>here</ion-button></div>} */}
+      </Host>
     );
   }
 }
